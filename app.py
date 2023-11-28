@@ -8,7 +8,7 @@ app = Flask(__name__)
 def POTD():
     try:
         # Run your Python script using subprocess
-        result = subprocess.run(['python3', 'potd.py'], capture_output=True, text=True)
+        result = subprocess.run(['python3', 'trigger.py'], capture_output=True, text=True)
         output = result.stdout
         return jsonify({'success': True, 'output': output})
     except Exception as e:
