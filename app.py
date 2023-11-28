@@ -4,11 +4,11 @@ import subprocess
 
 app = Flask(__name__)
 
-@app.route('/potd>', methods=['POST','GET'])
+@app.route('/potd', methods=['POST','GET'])
 def POTD(gmail):
     try:
         # Run your Python script using subprocess
-        result = subprocess.run(['python3', 'potd.py.py'], capture_output=True, text=True)
+        result = subprocess.run(['python3', 'potd.py'], capture_output=True, text=True)
         output = result.stdout
         return jsonify({'success': True, 'output': output})
     except Exception as e:
