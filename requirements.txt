@@ -3,3 +3,5 @@ Gunicorn
 firebase_admin
 beautifulsoup4
 requests
+datetime
+pytz
