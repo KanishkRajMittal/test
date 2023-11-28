@@ -5,7 +5,7 @@ import subprocess
 app = Flask(__name__)
 
 @app.route('/potd', methods=['POST','GET'])
-def POTD(gmail):
+def POTD():
     try:
         # Run your Python script using subprocess
         result = subprocess.run(['python3', 'potd.py'], capture_output=True, text=True)
