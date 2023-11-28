@@ -6,13 +6,6 @@ import requests
 import datetime
 import pytz
 from time import sleep
-from selenium import webdriver
-from selenium.webdriver import Chrome
-from selenium.webdriver.support.ui import Select
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
-from selenium.common.exceptions import NoSuchElementException
 from datetime import date
 from bs4 import BeautifulSoup
 import requests
