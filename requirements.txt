@@ -3,4 +3,3 @@ Gunicorn
 firebase_admin
 beautifulsoup4
 requests
-selenium
