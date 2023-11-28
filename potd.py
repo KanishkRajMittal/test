@@ -14,6 +14,11 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 
+from selenium.webdriver.chrome.options import Options
+
+
+
+
 def extract_info(problem_description):
     # Find the indices of key phrases
     problem_statement_index = problem_description.find("Problem Statement")
@@ -55,7 +60,9 @@ def extract_info(problem_description):
 
 
 def leetcode_potd():
-    driver = webdriver.Chrome()
+    chrome_options = Options()
+    chrome_options.add_argument('--headless')
+    driver = webdriver.Chrome(options=chrome_options)
     driver.get("https://leetcode.com/problemset/all/")
     sleep(3)
 
@@ -81,7 +88,9 @@ def leetcode_potd():
 def gfg_potd():
     # Create a webdriver instance
     # Create a webdriver instance
-    driver = Chrome()
+    chrome_options = Options()
+    chrome_options.add_argument('--headless')
+    driver = webdriver.Chrome(options=chrome_options)
 
     # Navigate to the link
     driver.get("https://www.geeksforgeeks.org/problem-of-the-day")
